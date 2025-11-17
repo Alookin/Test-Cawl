@@ -1,0 +1,29 @@
+# Core WordPress
+wp-admin/
+wp-includes/
+
+# Contenu à exclure
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# Config locale
+wp-config.php
+
+# Logs & systèmes
+*.log
+.DS_Store
+Thumbs.db
+
+# Dépendances
+node_modules/
+vendor/
+
+# Outils IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -1,0 +1,169 @@
+[17-Nov-2025 21:04:09 UTC] PHP Fatal error:  Uncaught exception 'Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseException' with message 'The server returned an error.'. in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php:37
+HTTP status code: 403
+Response:
+{
+    "errorId": "b919687b-c035-4973-8e78-65250a82e072",
+    "errors": [
+        {
+            "category": "DIRECT_PLATFORM_ERROR",
+            "code": "9007",
+            "httpStatusCode": 403,
+            "id": "ACCESS_TO_MERCHANT_NOT_ALLOWED",
+            "message": "ACCESS_TO_MERCHANT_NOT_ALLOWED"
+        }
+    ]
+}
+Stack trace:
+#0 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\Communicator.php(144): Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseExceptionFactory->createException(403, Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\ErrorResponse), NULL)
+#1 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\src\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient.php(20): Syde\Vendor\Worldline\OnlinePayments\Sdk\Communicator->post(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseClassMap), '/v2//hostedtoke...', '', Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest), NULL, NULL)
+#2 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(122): Syde\Vendor\Worldline\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient->createHostedTokenization(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest))
+#3 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(50): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->makeFrontendConfig(Object(Syde\Vendor\Worldline\Inpsyde\Modularity\Container\ReadOnlyContainer))
+#4 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Script.php(45): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\{closure}()
+#5 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(59): Inpsyde\Assets\Script->localize()
+#6 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(47): Inpsyde\Assets\Handler\ScriptHandler->register(Object(Inpsyde\Assets\Script))
+#7 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(233): Inpsyde\Assets\Handler\ScriptHandler->enqueue(Object(Inpsyde\Assets\Script))
+#8 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(194): Inpsyde\Assets\AssetManager->loopCurrentHookAssets('wp_enqueue_scri...', true)
+#9 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(171): Inpsyde\Assets\AssetManager->processAssets('wp_enqueue_scri...')
+#10 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): Inpsyde\Assets\AssetManager->Inpsyde\Assets\{closure}('')
+#11 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#12 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#13 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\script-loader.php(2299): do_action('wp_enqueue_scri...')
+#14 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): wp_enqueue_scripts('')
+#15 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#17 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\general-template.php(3192): do_action('wp_head')
+#18 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template-canvas.php(17): wp_head()
+#19 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\bourg\\...')
+#20 C:\Users\bourg\Local Sites\salle-test\app\public\wp-blog-header.php(19): require_once('C:\\Users\\bourg\\...')
+#21 C:\Users\bourg\Local Sites\salle-test\app\public\index.php(17): require('C:\\Users\\bourg\\...')
+#22 {main}
+  thrown in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php on line 37
+[17-Nov-2025 21:04:18 UTC] PHP Fatal error:  Uncaught exception 'Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseException' with message 'The server returned an error.'. in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php:37
+HTTP status code: 403
+Response:
+{
+    "errorId": "9f3be5f6-c3cf-4223-8a55-ddc34a7a3b28",
+    "errors": [
+        {
+            "category": "DIRECT_PLATFORM_ERROR",
+            "code": "9007",
+            "httpStatusCode": 403,
+            "id": "ACCESS_TO_MERCHANT_NOT_ALLOWED",
+            "message": "ACCESS_TO_MERCHANT_NOT_ALLOWED"
+        }
+    ]
+}
+Stack trace:
+#0 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\Communicator.php(144): Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseExceptionFactory->createException(403, Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\ErrorResponse), NULL)
+#1 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\src\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient.php(20): Syde\Vendor\Worldline\OnlinePayments\Sdk\Communicator->post(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseClassMap), '/v2//hostedtoke...', '', Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest), NULL, NULL)
+#2 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(122): Syde\Vendor\Worldline\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient->createHostedTokenization(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest))
+#3 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(50): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->makeFrontendConfig(Object(Syde\Vendor\Worldline\Inpsyde\Modularity\Container\ReadOnlyContainer))
+#4 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Script.php(45): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\{closure}()
+#5 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(59): Inpsyde\Assets\Script->localize()
+#6 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(47): Inpsyde\Assets\Handler\ScriptHandler->register(Object(Inpsyde\Assets\Script))
+#7 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(233): Inpsyde\Assets\Handler\ScriptHandler->enqueue(Object(Inpsyde\Assets\Script))
+#8 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(194): Inpsyde\Assets\AssetManager->loopCurrentHookAssets('wp_enqueue_scri...', true)
+#9 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(171): Inpsyde\Assets\AssetManager->processAssets('wp_enqueue_scri...')
+#10 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): Inpsyde\Assets\AssetManager->Inpsyde\Assets\{closure}('')
+#11 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#12 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#13 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\script-loader.php(2299): do_action('wp_enqueue_scri...')
+#14 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): wp_enqueue_scripts('')
+#15 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#17 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\general-template.php(3192): do_action('wp_head')
+#18 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template-canvas.php(17): wp_head()
+#19 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\bourg\\...')
+#20 C:\Users\bourg\Local Sites\salle-test\app\public\wp-blog-header.php(19): require_once('C:\\Users\\bourg\\...')
+#21 C:\Users\bourg\Local Sites\salle-test\app\public\index.php(17): require('C:\\Users\\bourg\\...')
+#22 {main}
+  thrown in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php on line 37
+[17-Nov-2025 21:31:16 UTC] PHP Fatal error:  Uncaught exception 'Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseException' with message 'The server returned an error.'. in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php:37
+HTTP status code: 403
+Response:
+{
+    "errorId": "709faaee-2746-4308-80a8-69d1d5c22421",
+    "errors": [
+        {
+            "category": "DIRECT_PLATFORM_ERROR",
+            "code": "9007",
+            "httpStatusCode": 403,
+            "id": "ACCESS_TO_MERCHANT_NOT_ALLOWED",
+            "message": "ACCESS_TO_MERCHANT_NOT_ALLOWED"
+        }
+    ]
+}
+Stack trace:
+#0 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\Communicator.php(144): Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseExceptionFactory->createException(403, Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\ErrorResponse), NULL)
+#1 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\src\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient.php(20): Syde\Vendor\Worldline\OnlinePayments\Sdk\Communicator->post(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseClassMap), '/v2//hostedtoke...', '', Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest), NULL, NULL)
+#2 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(122): Syde\Vendor\Worldline\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient->createHostedTokenization(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest))
+#3 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(50): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->makeFrontendConfig(Object(Syde\Vendor\Worldline\Inpsyde\Modularity\Container\ReadOnlyContainer))
+#4 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Script.php(45): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\{closure}()
+#5 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(59): Inpsyde\Assets\Script->localize()
+#6 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(47): Inpsyde\Assets\Handler\ScriptHandler->register(Object(Inpsyde\Assets\Script))
+#7 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(233): Inpsyde\Assets\Handler\ScriptHandler->enqueue(Object(Inpsyde\Assets\Script))
+#8 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(194): Inpsyde\Assets\AssetManager->loopCurrentHookAssets('wp_enqueue_scri...', true)
+#9 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(171): Inpsyde\Assets\AssetManager->processAssets('wp_enqueue_scri...')
+#10 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): Inpsyde\Assets\AssetManager->Inpsyde\Assets\{closure}('')
+#11 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#12 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#13 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\script-loader.php(2299): do_action('wp_enqueue_scri...')
+#14 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): wp_enqueue_scripts('')
+#15 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#17 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\general-template.php(3192): do_action('wp_head')
+#18 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template-canvas.php(17): wp_head()
+#19 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\bourg\\...')
+#20 C:\Users\bourg\Local Sites\salle-test\app\public\wp-blog-header.php(19): require_once('C:\\Users\\bourg\\...')
+#21 C:\Users\bourg\Local Sites\salle-test\app\public\index.php(17): require('C:\\Users\\bourg\\...')
+#22 {main}
+  thrown in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php on line 37
+[17-Nov-2025 21:42:45 UTC] Erreur d’événement de déplanification de tâche pour le crochet wp_1_wc_regenerate_images_cron. Code d’erreur : could_not_set. Message d’erreur : La liste des évènements planifiés n’a pas pu être sauvegardée.. Données : {"schedule":"wp_1_wc_regenerate_images_cron_interval","args":[],"interval":300}
+[17-Nov-2025 21:43:21 UTC] PHP Fatal error:  Uncaught exception 'Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseException' with message 'The server returned an error.'. in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php:37
+HTTP status code: 403
+Response:
+{
+    "errorId": "848c68e7-67f1-4562-acd6-bc95ba6f8ad6",
+    "errors": [
+        {
+            "category": "DIRECT_PLATFORM_ERROR",
+            "code": "9007",
+            "httpStatusCode": 403,
+            "id": "ACCESS_TO_MERCHANT_NOT_ALLOWED",
+            "message": "ACCESS_TO_MERCHANT_NOT_ALLOWED"
+        }
+    ]
+}
+Stack trace:
+#0 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\Communicator.php(144): Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseExceptionFactory->createException(403, Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\ErrorResponse), NULL)
+#1 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\src\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient.php(20): Syde\Vendor\Worldline\OnlinePayments\Sdk\Communicator->post(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\ResponseClassMap), '/v2//hostedtoke...', '', Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest), NULL, NULL)
+#2 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(122): Syde\Vendor\Worldline\OnlinePayments\Sdk\Merchant\HostedTokenization\HostedTokenizationClient->createHostedTokenization(Object(Syde\Vendor\Worldline\OnlinePayments\Sdk\Domain\CreateHostedTokenizationRequest))
+#3 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\modules\inpsyde\worldline-hosted-tokenization-gateway\src\HostedTokenizationGatewayModule.php(50): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->makeFrontendConfig(Object(Syde\Vendor\Worldline\Inpsyde\Modularity\Container\ReadOnlyContainer))
+#4 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Script.php(45): Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\HostedTokenizationGatewayModule->Syde\Vendor\Worldline\Inpsyde\WorldlineForWoocommerce\HostedTokenizationGateway\{closure}()
+#5 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(59): Inpsyde\Assets\Script->localize()
+#6 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\Handler\ScriptHandler.php(47): Inpsyde\Assets\Handler\ScriptHandler->register(Object(Inpsyde\Assets\Script))
+#7 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(233): Inpsyde\Assets\Handler\ScriptHandler->enqueue(Object(Inpsyde\Assets\Script))
+#8 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(194): Inpsyde\Assets\AssetManager->loopCurrentHookAssets('wp_enqueue_scri...', true)
+#9 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\inpsyde\assets\src\AssetManager.php(171): Inpsyde\Assets\AssetManager->processAssets('wp_enqueue_scri...')
+#10 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): Inpsyde\Assets\AssetManager->Inpsyde\Assets\{closure}('')
+#11 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#12 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#13 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\script-loader.php(2299): do_action('wp_enqueue_scri...')
+#14 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(324): wp_enqueue_scripts('')
+#15 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#16 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#17 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\general-template.php(3192): do_action('wp_head')
+#18 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\themes\blocksy\header.php(21): wp_head()
+#19 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template.php(810): require_once('C:\\Users\\bourg\\...')
+#20 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template.php(745): load_template('C:\\Users\\bourg\\...', true, Array)
+#21 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#22 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\themes\blocksy\single.php(10): get_header()
+#23 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template.php(812): require('C:\\Users\\bourg\\...')
+#24 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template.php(745): load_template('C:\\Users\\bourg\\...', false, Array)
+#25 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\general-template.php(206): locate_template(Array, true, false, Array)
+#26 C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\themes\blocksy\page.php(15): get_template_part('single')
+#27 C:\Users\bourg\Local Sites\salle-test\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\bourg\\...')
+#28 C:\Users\bourg\Local Sites\salle-test\app\public\wp-blog-header.php(19): require_once('C:\\Users\\bourg\\...')
+#29 C:\Users\bourg\Local Sites\salle-test\app\public\index.php(17): require('C:\\Users\\bourg\\...')
+#30 {main}
+  thrown in C:\Users\bourg\Local Sites\salle-test\app\public\wp-content\plugins\cawl\vendor\wl-online-payments-direct\sdk-php\lib\OnlinePayments\Sdk\ResponseExceptionFactory.php on line 37
